@@ -38,7 +38,7 @@ class Usuario(ABC):
 #Agregamos la funcionalidad relacionada con la contraseña y validacion.
 #Con este metodo validar_credenciales nos va a ser util para verificar si el usuario pone los datos correctos
 
- @property
+    @property
     def contrasenia(self):
         return self._contrasenia
     
