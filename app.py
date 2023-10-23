@@ -26,6 +26,10 @@ def subMenu_profesor():
     print("2. Ver curso.")
     print("3. Volver al menú principal")
 
+def mostrar_cursos(cursos):
+    for curso in cursos:
+        print(f"{curso} Carrera: Tecnicatura Universitaria en Programación")
+
 def ingreso_credenciales(usuarios):
     email = input("Ingrese su email: ")
     password = input("Ingrese su contraseña: ")
@@ -158,9 +162,7 @@ while respuesta != "salir":
             else:
                 print(mensaje)
         elif int(opt) == 3:
-            print("Cursos disponibles:")
-            for i, curso in enumerate(cursos, 1):
-                print(f"{i}. {curso.nombre}")
+            mostrar_cursos(cursos)
         elif int(opt) == 4:
             respuesta = "salir"
         else:
