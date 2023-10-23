@@ -134,7 +134,7 @@ def ingreso_profesor(profesor):
         else: 
             print("Ingrese una opción numérica.")
 
-# App principal
+# app y menu principal
 mensaje_bienvenida()
 respuesta = ''
 
@@ -168,6 +168,6 @@ while respuesta != "salir":
     else: 
         print("Ingrese una opción numérica.")
     
-    input("Presione cualquier tecla para continuar....") # Pausa
+    input("Presione cualquier tecla para continuar....")
 
 print("Hasta luego!")
