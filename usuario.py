@@ -34,3 +34,21 @@ class Usuario(ABC):
     @email.setter
     def email(self, nuevo_email):
         self._email = nuevo_email
+
+#Agregamos la funcionalidad relacionada con la contraseña y validacion.
+#Con este metodo validar_credenciales nos va a ser util para verificar si el usuario pone los datos correctos
+
+ @property
+    def contrasenia(self):
+        return self._contrasenia
+    
+    @contrasenia.setter
+    def contrasenia(self, nueva_contrasenia):
+        self._contrasenia = nueva_contrasenia
+
+    def validar_credenciales(self, email_ingresado: str, contrasenia_ingresada: str) -> bool:
+        return self._email == email_ingresado and self._contrasenia == contrasenia_ingresada
+
+    @abstractmethod
+    def __str__(self) -> str:
+        raise NotImplementedError
