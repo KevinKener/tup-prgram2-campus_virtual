@@ -11,6 +11,14 @@ class Estudiante(Usuario):
         self.__anio_inscripcion_carrera = anio_inscripcion_carrera
         self.__mis_cursos = []
 
+    #Agregamos la funcion para desmatricularse del curso.
+
+    def desmatricularse_curso(self, curso):
+        if curso in self.mis_cursos:
+            self.mis_cursos.remove(curso)
+        else:
+            print("No estás matriculado en este curso.")
+
     @property
     def legajo(self):
         return self.__legajo
